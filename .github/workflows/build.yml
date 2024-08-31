@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Set up JDK 21
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
           java-version: 21
           distribution: 'temurin'
@@ -32,4 +32,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=Techmate-Chess_BoardBuddy
+        run: mvn -B install org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=Techmate-Chess_BoardBuddy
