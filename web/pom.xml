@@ -9,7 +9,7 @@
   <groupId>com.rufus.techmate.boardbuddy</groupId>
   <artifactId>web</artifactId>
   <version>1.0.0-SNAPSHOT</version>
-  <packaging>war</packaging>
+  <packaging>jar</packaging>
 
   <parent>
     <groupId>com.rufus.techmate.boardbuddy</groupId>
