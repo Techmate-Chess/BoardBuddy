@@ -1,3 +1,3 @@
 # TechMate Board Buddy
 
-<p align="center">[![Quality Gate S<p align="center">tatus](https://sonarcloud.io/api/project_badges/measure?project=Techmate-Chess_BoardBuddy&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Techmate-Chess_BoardBuddy)[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=Techmate-Chess_BoardBuddy&metric=bugs)](https://sonarcloud.io/summary/new_code?id=Techmate-Chess_BoardBuddy)[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=Techmate-Chess_BoardBuddy&metric=coverage)](https://sonarcloud.io/summary/new_code?id=Techmate-Chess_BoardBuddy)</p>
+<p align="center"><img src=https://img.shields.io/sonar/quality_gate/Techmate-Chess_BoardBuddy/main?server=https%3A%2F%2Fsonarcloud.io/></p>
