@@ -14,8 +14,6 @@
   <properties>
     <maven.compiler.source>21</maven.compiler.source>
     <maven.compiler.target>21</maven.compiler.target>
-    <sonar.organization>techmate-chess</sonar.organization>
-    <sonar.projectKey>Techmate-Chess_BoardBuddy</sonar.projectKey>
   </properties>
 
   <profiles>

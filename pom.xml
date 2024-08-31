@@ -11,6 +11,11 @@
   <version>1.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
+  <properties>
+    <sonar.organization>techmate-chess</sonar.organization>
+    <sonar.projectKey>Techmate-Chess_BoardBuddy</sonar.projectKey>
+  </properties>
+
   <modules>
     <module>super-pom</module>
     <module>launcher</module>
