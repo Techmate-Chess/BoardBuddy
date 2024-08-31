@@ -7,13 +7,13 @@
   <name>TechMate Launcher</name>
   <description>Launches the application</description>
 
-  <groupId>com.rufus.techmate</groupId>
-  <artifactId>techmate-launcher</artifactId>
+  <groupId>com.rufus.techmate.boardbuddy</groupId>
+  <artifactId>launcher</artifactId>
   <version>1.0.0-SNAPSHOT</version>
 
   <parent>
-    <groupId>com.rufus.techmate</groupId>
-    <artifactId>techmate-super-pom</artifactId>
+    <groupId>com.rufus.techmate.boardbuddy</groupId>
+    <artifactId>super-pom</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <relativePath />
   </parent>

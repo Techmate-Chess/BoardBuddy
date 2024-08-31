@@ -5,13 +5,13 @@
   <modelVersion>4.0.0</modelVersion>
   <name>Techmate Core</name>
   <description>The heart of the application</description>
-  <groupId>com.rufus.techmate</groupId>
-  <artifactId>techmate-core</artifactId>
+  <groupId>com.rufus.techmate.boardbuddy</groupId>
+  <artifactId>core</artifactId>
   <version>1.0.0-SNAPSHOT</version>
 
   <parent>
-    <groupId>com.rufus.techmate</groupId>
-    <artifactId>techmate-super-pom</artifactId>
+    <groupId>com.rufus.techmate.boardbuddy</groupId>
+    <artifactId>super-pom</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <relativePath />
   </parent>

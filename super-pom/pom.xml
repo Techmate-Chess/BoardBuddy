@@ -4,11 +4,11 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <name>TechMate Super Pom</name>
+  <name>Board Buddy Super Pom</name>
   <description>A parent pom for all maven modules in the TechMate project</description>
 
-  <groupId>com.rufus.techmate</groupId>
-  <artifactId>techmate-super-pom</artifactId>
+  <groupId>com.rufus.techmate.boardbuddy</groupId>
+  <artifactId>super-pom</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
@@ -19,9 +19,43 @@
     <sonar.host.url>https://sonarcloud.io</sonar.host.url>
   </properties>
 
+  <profiles>
+    <profile>
+      <!-- Set this to be active by default in your Maven User Settings -->
+      <id>dev</id>
+      <properties>
+        <env>dev</env>
+      </properties>
+    </profile>
+
+    <!-- Enabled by the CI build script automatically -->
+    <profile>
+      <id>pipeline</id>
+      <properties>
+        <env>prod</env>
+      </properties>
+    </profile>
+  </profiles>
+
   <dependencyManagement>
     <dependencies>
+      <dependency>
+        <groupId>io.quarkus</groupId>
+        <artifactId>quarkus-universe-bom</artifactId>
+        <version>3.14.1</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+
       <!-- Compile Dependencies -->
+      <!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-catalina -->
+      <dependency>
+        <groupId>org.apache.tomcat</groupId>
+        <artifactId>tomcat-catalina</artifactId>
+        <version>10.1.28</version>
+        <scope>compile</scope>
+      </dependency>
+
       <!-- https://mvnrepository.com/artifact/org.apache.tomcat.embed/tomcat-embed-core -->
       <dependency>
         <groupId>org.apache.tomcat.embed</groupId>
@@ -61,22 +95,22 @@
       </dependency>
 
       <dependency>
-        <groupId>com.rufus.techmate</groupId>
-        <artifactId>techmate-launcher</artifactId>
+        <groupId>com.rufus.techmate.boardbuddy</groupId>
+        <artifactId>launcher</artifactId>
         <version>1.0.0-SNAPSHOT</version>
         <scope>compile</scope>
       </dependency>
 
       <dependency>
-        <groupId>com.rufus.techmate</groupId>
-        <artifactId>techmate-core</artifactId>
+        <groupId>com.rufus.techmate.boardbuddy</groupId>
+        <artifactId>core</artifactId>
         <version>1.0.0-SNAPSHOT</version>
         <scope>compile</scope>
       </dependency>
 
       <dependency>
-        <groupId>com.rufus.techmate</groupId>
-        <artifactId>techmate-web</artifactId>
+        <groupId>com.rufus.techmate.boardbuddy</groupId>
+        <artifactId>web</artifactId>
         <version>1.0.0-SNAPSHOT</version>
         <scope>compile</scope>
       </dependency>
@@ -139,18 +173,27 @@
   <build>
     <pluginManagement>
       <plugins>
-        <!-- Maven Compiler Plugin
-                https://maven.apache.org/plugins/maven-compiler-plugin/download.cgi -->
+        <!-- Compiler Plugin https://maven.apache.org/plugins/maven-compiler-plugin/download.cgi -->
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
           <version>3.13.0</version>
         </plugin>
-        <!-- Maven JAR Plugin https://maven.apache.org/plugins/maven-jar-plugin/download.cgi -->
+        <!-- JAR Plugin https://maven.apache.org/plugins/maven-jar-plugin/download.cgi -->
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-jar-plugin</artifactId>
           <version>3.4.2</version>
+        </plugin>
+        <!-- Tomcat https://mvnrepository.com/artifact/org.apache.tomcat.maven/tomcat7-maven-plugin -->
+        <plugin>
+          <groupId>org.apache.tomcat.maven</groupId>
+          <artifactId>tomcat7-maven-plugin</artifactId>
+          <version>2.2</version>
+          <configuration>
+            <port>8080</port>
+            <path>/your-app</path>
+          </configuration>
         </plugin>
       </plugins>
     </pluginManagement>
