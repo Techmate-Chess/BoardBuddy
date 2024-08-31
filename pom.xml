@@ -14,6 +14,10 @@
   <properties>
     <sonar.organization>techmate-chess</sonar.organization>
     <sonar.projectKey>Techmate-Chess_BoardBuddy</sonar.projectKey>
+    <sonar.coverage.jacoco.xmlReportPaths>
+      ${project.basedir}/report-aggregate/target/site/
+      jacoco-aggregate/jacoco.xml
+    </sonar.coverage.jacoco.xmlReportPaths>
   </properties>
 
   <modules>

@@ -171,25 +171,27 @@
   <build>
     <pluginManagement>
       <plugins>
-        <!-- Compiler Plugin https://maven.apache.org/plugins/maven-compiler-plugin/download.cgi -->
+        <!-- https://maven.apache.org/plugins/maven-compiler-plugin/download.cgi -->
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
           <version>3.13.0</version>
         </plugin>
-        <!-- Jar Plugin https://maven.apache.org/plugins/maven-jar-plugin/download.cgi -->
+        <!-- https://maven.apache.org/plugins/maven-jar-plugin/download.cgi -->
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-jar-plugin</artifactId>
           <version>3.4.2</version>
         </plugin>
-        <!-- War Plugin https://maven.apache.org/plugins/maven-war-plugin/download.cgi -->
+
+        <!-- https://maven.apache.org/plugins/maven-war-plugin/download.cgi -->
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-war-plugin</artifactId>
           <version>3.4.0</version>
         </plugin>
-        <!-- Tomcat https://mvnrepository.com/artifact/org.apache.tomcat.maven/tomcat7-maven-plugin -->
+
+        <!-- https://mvnrepository.com/artifact/org.apache.tomcat.maven/tomcat7-maven-plugin -->
         <plugin>
           <groupId>org.apache.tomcat.maven</groupId>
           <artifactId>tomcat7-maven-plugin</artifactId>
@@ -198,6 +200,39 @@
             <port>8080</port>
             <path>/your-app</path>
           </configuration>
+        </plugin>
+
+        <!-- https://central.sonatype.com/search?q=g:org.jacoco%20a:jacoco-maven-plugin&smo=true -->
+        <plugin>
+          <groupId>org.jacoco</groupId>
+          <artifactId>jacoco-maven-plugin</artifactId>
+          <version>0.8.12</version>
+          <executions>
+            <execution>
+              <id>prepare-agent</id>
+              <goals>
+                <goal>prepare-agent</goal>
+              </goals>
+            </execution>
+            <execution>
+              <id>report</id>
+              <goals>
+                <goal>report</goal>
+              </goals>
+              <configuration>
+                <formats>
+                  <format>XML</format>
+                </formats>
+              </configuration>
+            </execution>
+            <execution>
+              <id>report-aggregate</id>
+              <phase>verify</phase>
+              <goals>
+                <goal>report-aggregate</goal>
+              </goals>
+            </execution>
+          </executions>
         </plugin>
       </plugins>
     </pluginManagement>
