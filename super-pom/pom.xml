@@ -3,8 +3,7 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-
-  <name>Board Buddy Super Pom</name>
+  <name>Boardbuddy Super Pom</name>
   <description>A parent pom for all maven modules in the TechMate project</description>
 
   <groupId>com.rufus.techmate.boardbuddy</groupId>
@@ -112,6 +111,7 @@
         <groupId>com.rufus.techmate.boardbuddy</groupId>
         <artifactId>web</artifactId>
         <version>1.0.0-SNAPSHOT</version>
+        <type>war</type>
         <scope>compile</scope>
       </dependency>
 
@@ -179,11 +179,17 @@
           <artifactId>maven-compiler-plugin</artifactId>
           <version>3.13.0</version>
         </plugin>
-        <!-- JAR Plugin https://maven.apache.org/plugins/maven-jar-plugin/download.cgi -->
+        <!-- Jar Plugin https://maven.apache.org/plugins/maven-jar-plugin/download.cgi -->
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-jar-plugin</artifactId>
           <version>3.4.2</version>
+        </plugin>
+        <!-- War Plugin https://maven.apache.org/plugins/maven-war-plugin/download.cgi -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-war-plugin</artifactId>
+          <version>3.4.0</version>
         </plugin>
         <!-- Tomcat https://mvnrepository.com/artifact/org.apache.tomcat.maven/tomcat7-maven-plugin -->
         <plugin>

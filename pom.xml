@@ -3,7 +3,7 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <name>Techmate</name>
+  <name>Boardbuddy Parent Pom</name>
   <description>It's the root of it all!</description>
 
   <groupId>com.rufus.techmate.boardbuddy</groupId>
