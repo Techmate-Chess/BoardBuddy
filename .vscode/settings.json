@@ -1,0 +1,6 @@
+{
+ "editor.foldingStrategy": "indentation",
+"java.format.settings.profile": "GoogleStyle",
+"java.configuration.updateBuildConfiguration": "automatic",
+"java.format.settings.url": "eclipse-formatter.xml"
+}
