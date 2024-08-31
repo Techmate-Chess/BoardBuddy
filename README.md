@@ -1,6 +1,6 @@
 # TechMate Board Buddy
 
-<table>
+<table border="0">
 <tr>
 <td><img src="https://img.shields.io/sonar/quality_gate/Techmate-Chess_BoardBuddy/main?server=https%3A%2F%2Fsonarcloud.io&style=plastic&logo=sonarcloud"</td>
 <td><img src="https://img.shields.io/sonar/coverage/Techmate-Chess_BoardBuddy/main?server=https%3A%2F%2Fsonarcloud.io&style=plastic&logo=sonarcloud"</td>
