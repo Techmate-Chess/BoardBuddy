@@ -1,10 +1,11 @@
 {
- "editor.foldingStrategy": "indentation",
-"java.format.settings.profile": "GoogleStyle",
-"java.configuration.updateBuildConfiguration": "automatic",
-"java.format.settings.url": "eclipse-formatter.xml",
-"sonarlint.connectedMode.project": {
-  "connectionId": "techmate-chess",
-  "projectKey": "Techmate-Chess_BoardBuddy"
-}
+  "editor.foldingStrategy": "indentation",
+  "java.format.settings.profile": "GoogleStyle",
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "java.format.settings.url": "eclipse-formatter.xml",
+  "sonarlint.connectedMode.project": {
+    "connectionId": "techmate-chess",
+    "projectKey": "Techmate-Chess_BoardBuddy"
+  },
+  "hediet.vscode-drawio.theme": "min"
 }
