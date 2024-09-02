@@ -1,4 +1,5 @@
 {
+
   "editor.foldingStrategy": "indentation",
   "java.format.settings.profile": "GoogleStyle",
   "java.configuration.updateBuildConfiguration": "automatic",
@@ -7,5 +8,5 @@
     "connectionId": "techmate-chess",
     "projectKey": "Techmate-Chess_BoardBuddy"
   },
-  "hediet.vscode-drawio.theme": "min"
+  "hediet.vscode-drawio.theme": "min",
 }

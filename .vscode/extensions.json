@@ -1,0 +1,5 @@
+{
+    "recommendations": ["vscjava.vscode-java-pack", "sonarsource.sonarlint-vscode","redhat.vscode-quarkus",
+    "mtxr.sqltools","ms-azuretools.vscode-docker","hediet.vscode-drawio", 
+    "yzhang.markdown-all-in-one","bierner.markdown-preview-github-styles"]
+}
